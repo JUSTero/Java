@@ -16,16 +16,16 @@ public class Task1 {
         System.out.println("Enter N: ");
         int N = iScanner.nextInt();
         System.out.println("Enter C1: ");
-        String C1 = iScanner.next();
+        char C1 = iScanner.next().charAt(0);
         System.out.println("Enter C2: ");
-        String C2 = iScanner.next();
+        char C2 = iScanner.next().charAt(0);
         iScanner.close();
-        String Result = "";
+        StringBuilder Result = new StringBuilder();
 
         for (int i = 0; i < N / 2; i++) {
-            Result = Result + C1 + C2;
+            Result.append(String.format("%c%c", C1, C2));
         }
 
-        System.out.printf("Result: %s \n", Result);
+        System.out.printf("Result: %s \n", Result.toString());
     }
 }
