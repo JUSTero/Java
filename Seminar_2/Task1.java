@@ -10,6 +10,13 @@ import java.util.Scanner;
  */
 
 public class Task1 {
+    private static String GenerateString(int N, char C1, char C2) {
+        StringBuilder Result = new StringBuilder();
+        for (int i = 0; i < N / 2; i++) {
+            Result.append(String.format("%c%c", C1, C2));
+        }
+        return Result.toString();
+    }
 
     public static void main(String[] args) {
         Scanner iScanner = new Scanner(System.in);
@@ -20,12 +27,7 @@ public class Task1 {
         System.out.println("Enter C2: ");
         char C2 = iScanner.next().charAt(0);
         iScanner.close();
-        StringBuilder Result = new StringBuilder();
 
-        for (int i = 0; i < N / 2; i++) {
-            Result.append(String.format("%c%c", C1, C2));
-        }
-
-        System.out.printf("Result: %s \n", Result.toString());
+        System.out.printf("Result: %s", GenerateString(N, C1, C2));
     }
 }
