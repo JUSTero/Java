@@ -17,9 +17,9 @@ public class Task2 {
         public static void main(String[] args) {
             int[] arr = { 64, 34, 25, 12, 22, 11, 90 };
             logger.setLevel(Level.INFO);
-            logger.info("Исходный массив: " + Arrays.toString(arr));
+            logger.info("First array: " + Arrays.toString(arr));
             bubbleSort(arr);
-            logger.info("Отсортированный массив: " + Arrays.toString(arr));
+            logger.info("Sorted array: " + Arrays.toString(arr));
         }
 
         public static void bubbleSort(int[] arr) {
@@ -32,7 +32,7 @@ public class Task2 {
                         arr[j + 1] = temp;
                     }
                 }
-                logger.info("Промежуточный результат на " + (i + 1) + "-й итерации: " + Arrays.toString(arr));
+                logger.info("Intermidiate result for " + (i + 1) + " iteration: " + Arrays.toString(arr));
             }
         }
     }
