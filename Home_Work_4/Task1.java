@@ -5,6 +5,14 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
+/*Реализовать консольное приложение, которое:
+
+1.Принимает от пользователя и “запоминает” строки.
+2.Если введено print, выводит строки так, чтобы последняя введенная была первой в списке, а первая - последней.
+3.Если введено revert, удаляет предыдущую введенную строку из памяти.
+4.Если введено exit, завершаем программу
+*/
+
 public class Task1 {
     public static <T> List<T> reverseList(List<T> list) {
         List<T> reverse = new ArrayList<>(list);
